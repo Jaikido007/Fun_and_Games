@@ -1,3 +1,14 @@
+# GOBLIN LOVER
+# -------------
+# by Jay Mullen
+#
+# Game rules:  Set your goblin names anmd watch them battle it out to be the
+# first Goblin to reach 5 loving hugs.
+# In the event of a tie - it goes to 'sudden death' - revealing the ultimate
+# Goblin Lover!
+#
+# Enjoy
+
 class GoblinLover
   # Initialise our two arrays to hold the results of the penalties
   def initialize
