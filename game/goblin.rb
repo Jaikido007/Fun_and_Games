@@ -2,7 +2,7 @@
 # -------------
 # by Jay Mullen
 #
-# Game rules:  Set your goblin names anmd watch them battle it out to be the
+# Game rules:  Set your goblin names and watch them battle it out to be the
 # first Goblin to reach 5 loving hugs.
 # In the event of a tie - it goes to 'sudden death' - revealing the ultimate
 # Goblin Lover!
@@ -10,7 +10,7 @@
 # Enjoy
 
 class GoblinLover
-  # Initialise our two arrays to hold the results of the penalties
+  # Initialise our two arrays to hold the results of the cuddles
   def initialize
     @score_p1 = Array.new
     @score_p2 = Array.new
@@ -66,13 +66,13 @@ class GoblinLover
     puts ""
     p2 = gets.chomp.capitalize
 
-    tie = 0 # Flag to indicate whether the players were level after the original 5 penalties
+    tie = 0 # Flag to indicate whether the players were level after the original 5 cuddles
     counter = 0
     while counter < 5
       counter += 1
 
       puts "\n#{p1}, it's cuddle time.\n\n"
-      # Get the outcome of a penalty, store it in player 1's array and spit out an appropriate message
+      # Get the outcome of a cuddle, store it in player 1's array and spit out an appropriate message
       outcome = cuddle
       @score_p1 << outcome
       if outcome == 1
@@ -82,7 +82,7 @@ class GoblinLover
       end
 
       puts "\n#{p2}, you're up next.\n\n"
-      # Get the outcome of a penalty, store it in player 2's array and spit out an appropriate message
+      # Get the outcome of a cuddle, store it in player 2's array and spit out an appropriate message
       outcome = cuddle
       @score_p2 << outcome
       if outcome == 1
@@ -110,7 +110,7 @@ class GoblinLover
     end
 
     # Compare the players' scores and print a message prnouncing the winner
-    # Now that sudden death is implemented, it should never be a draw
+    # Now that sudden death is implemented, it should never be a draw.
     if score_check(total_p1, total_p2) == 1
       puts "\n#{p1} wins #{total_p1} hugs - #{total_p2}"
     elsif score_check(total_p1, total_p2) == 2
