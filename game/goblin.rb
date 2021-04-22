@@ -93,13 +93,13 @@ class GoblinLover
     total_p1 = @score_p1.inject(0, :+)
     total_p2 = @score_p2.inject(0, :+)
 
-    # If the match was tied after 5 penalties, output a message to that effect
+    # If the match was tied after 5 cuddles, output a message to that effect
     if tie == 1
       puts "\nAfter 5 cuddles the scores were level...\n"
     end
 
     # Compare the players' scores and print a message prnouncing the winner
-    # Now that we've implemented sudden death, it should never be a draw
+    # Now that wsudden death is implemented, it should never be a draw
     if score_check(total_p1, total_p2) == 1
       puts "\n#{p1} wins #{total_p1} hugs - #{total_p2}"
     elsif score_check(total_p1, total_p2) == 2
